@@ -3,6 +3,7 @@ import "./CoupleDetails.css";
 import Countdown from "../Countdown/Countdown";
 import CoupleGallery from "../CoupleGallery/CoupleGallery";
 import Location from "../Location/Location";
+import ThankYouVideo from "../ThankYouVideo/ThankYouVideo";
 
 function CoupleDetails() {
   return (
@@ -40,6 +41,8 @@ function CoupleDetails() {
       <CoupleGallery />
 
       <Location />
+
+      <ThankYouVideo />
 
     </>
   );
