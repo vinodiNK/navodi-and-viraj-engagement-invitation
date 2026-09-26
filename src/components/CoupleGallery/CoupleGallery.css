@@ -42,7 +42,7 @@
 
 .gallery-grid {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -51,82 +51,39 @@
 
 
 /* =========================
-   IMAGE BOX
+   ALL IMAGE BOXES
 ========================= */
 
 .gallery-item {
+    width: 100%;
+    aspect-ratio: 4 / 5;
     position: relative;
     overflow: hidden;
     border-radius: 14px;
-    background: #ffffff;
+    background: #f8f3f0;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: galleryFade 1s ease both;
 }
 
 
 /* =========================
-   ALL IMAGES
+   ALL IMAGES SAME SIZE
 ========================= */
 
 .gallery-item img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
     transition: transform 0.8s ease, filter 0.8s ease;
 }
 
 
 /* =========================
-   FIRST / MAIN PHOTO
-========================= */
-
-.gallery-item-1 {
-    grid-column: span 2;
-    width: 100%;
-    /* Keeps the complete wedding photo visible */
-    aspect-ratio: 16 / 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f8f3f0;
-    animation-delay: 0.1s;
-}
-
-.gallery-item-1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-
-/* =========================
-   OTHER PHOTOS
-========================= */
-
-.gallery-item-2,
-.gallery-item-3,
-.gallery-item-4,
-.gallery-item-5 {
-    aspect-ratio: 4 / 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f8f3f0;
-}
-
-.gallery-item-2 img,
-.gallery-item-3 img,
-.gallery-item-4 img,
-.gallery-item-5 img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-
-/* =========================
-   HOVER EFFECT
+   HOVER
 ========================= */
 
 .gallery-item:hover img {
@@ -138,6 +95,10 @@
 /* =========================
    ANIMATION
 ========================= */
+
+.gallery-item-1 {
+    animation-delay: 0.1s;
+}
 
 .gallery-item-2 {
     animation-delay: 0.2s;
@@ -153,6 +114,10 @@
 
 .gallery-item-5 {
     animation-delay: 0.5s;
+}
+
+.gallery-item-6 {
+    animation-delay: 0.6s;
 }
 
 @keyframes galleryFade {
@@ -179,13 +144,7 @@
         max-width: 850px;
         gap: 16px;
     }
-    .gallery-item-1 {
-        aspect-ratio: 16 / 10;
-    }
-    .gallery-item-2,
-    .gallery-item-3,
-    .gallery-item-4,
-    .gallery-item-5 {
+    .gallery-item {
         aspect-ratio: 4 / 5;
     }
 }
@@ -210,45 +169,21 @@
         margin-top: 15px;
         margin-bottom: 30px;
     }
-    /* One photo per row */
+    /* One image per row */
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
-    /* =========================
-     MAIN PHOTO MOBILE
-  ========================= */
-    .gallery-item-1 {
-        grid-column: span 1;
-        /*
-      Wider ratio for mobile wedding photos.
-      Prevents faces from being cropped.
-    */
-        aspect-ratio: 4 / 3;
-    }
-    .gallery-item-1 img {
+    /* All mobile images same size */
+    .gallery-item {
         width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-    /* =========================
-     OTHER PHOTOS MOBILE
-  ========================= */
-    .gallery-item-2,
-    .gallery-item-3,
-    .gallery-item-4,
-    .gallery-item-5 {
         aspect-ratio: 4 / 5;
     }
-    .gallery-item-2 img,
-    .gallery-item-3 img,
-    .gallery-item-4 img,
-    .gallery-item-5 img {
+    .gallery-item img {
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
-    /* Smaller hover effect on mobile */
     .gallery-item:hover img {
         transform: scale(1.02);
     }

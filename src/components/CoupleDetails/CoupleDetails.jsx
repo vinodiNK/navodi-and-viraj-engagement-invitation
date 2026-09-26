@@ -1,6 +1,8 @@
+import "./CoupleDetails.css";
+
 import Countdown from "../Countdown/Countdown";
 import CoupleGallery from "../CoupleGallery/CoupleGallery";
-import "./CoupleDetails.css";
+import Location from "../Location/Location";
 
 function CoupleDetails() {
   return (
@@ -36,6 +38,9 @@ function CoupleDetails() {
       </section>
 
       <CoupleGallery />
+
+      <Location />
+
     </>
   );
 }

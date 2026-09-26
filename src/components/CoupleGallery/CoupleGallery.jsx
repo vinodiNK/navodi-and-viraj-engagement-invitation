@@ -5,47 +5,54 @@ import couple2 from "../../assets/images/couple/couple2.jpg";
 import couple3 from "../../assets/images/couple/couple3.jpg";
 import couple4 from "../../assets/images/couple/couple4.jpg";
 import couple5 from "../../assets/images/couple/couple5.jpg";
+import couple6 from "../../assets/images/couple/couple6.jpg";
 
 function CoupleGallery() {
-  const images = [
-    couple1,
-    couple2,
-    couple3,
-    couple4,
-    couple5,
-  ];
 
-  return (
-    <section className="couple-gallery">
+    const images = [
+        couple1,
+        couple2,
+        couple3,
+        couple4,
+        couple5,
+        couple6,
+    ];
 
-      <p className="gallery-subtitle">
-        OUR STORY
-      </p>
+    return (
+        <section className="couple-gallery">
 
-      <h2 className="gallery-title">
-        Moments Together
-      </h2>
+            <p className="gallery-subtitle">
+                OUR STORY
+            </p>
 
-      <div className="gallery-line"></div>
+            <h2 className="gallery-title">
+                Moments Together
+            </h2>
 
-      <div className="gallery-grid">
+            <div className="gallery-line"></div>
 
-        {images.map((image, index) => (
-          <div
-            className={`gallery-item gallery-item-${index + 1}`}
-            key={index}
-          >
-            <img
-              src={image}
-              alt={`Navodi and Viraj moment ${index + 1}`}
-            />
-          </div>
-        ))}
+            <div className="gallery-grid">
 
-      </div>
+                {images.map((image, index) => (
 
-    </section>
-  );
+                    <div
+                        className={`gallery-item gallery-item-${index + 1}`}
+                        key={index}
+                    >
+
+                        <img
+                            src={image}
+                            alt={`Navodi and Viraj moment ${index + 1}`}
+                        />
+
+                    </div>
+
+                ))}
+
+            </div>
+
+        </section>
+    );
 }
 
 export default CoupleGallery;
