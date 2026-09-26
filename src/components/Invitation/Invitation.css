@@ -2,15 +2,27 @@
    INVITATION PAGE
 ========================================= */
 
-.invitation-section {
+.invitation-page {
     width: 100%;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
     background: #000;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   IMAGE CONTAINER
+========================================= */
+
+.invitation-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin: 0;
-    padding: 0;
 }
 
 
@@ -25,20 +37,7 @@
     max-width: 1200px;
     margin: 0;
     padding: 0;
-    object-fit: contain;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    .invitation-image {
-        width: 100%;
-        max-width: 900px;
-        height: auto;
-    }
+    vertical-align: top;
 }
 
 
@@ -46,28 +45,40 @@
    MOBILE
 ========================================= */
 
-@media (max-width: 600px) {
-    .invitation-section {
+@media screen and (max-width: 600px) {
+    .invitation-page {
         width: 100%;
         min-height: 100vh;
-        display: block;
-        background: #000;
+    }
+    .invitation-container {
+        width: 100%;
     }
     .invitation-image {
-        display: block;
         width: 100%;
         max-width: none;
         height: auto;
-        margin: 0;
     }
 }
 
 
 /* =========================================
-   LARGE DESKTOP
+   TABLET
 ========================================= */
 
-@media (min-width: 1201px) {
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .invitation-image {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+    }
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media screen and (min-width: 1025px) {
     .invitation-image {
         width: 100%;
         max-width: 1200px;
