@@ -1,20 +1,11 @@
-/* =========================================
-   INVITATION PAGE
-========================================= */
-
 .invitation-page {
     width: 100%;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background: #000;
+    background: #ffffff;
     overflow-x: hidden;
 }
-
-
-/* =========================================
-   IMAGE CONTAINER
-========================================= */
 
 .invitation-container {
     width: 100%;
@@ -24,11 +15,6 @@
     justify-content: center;
     align-items: flex-start;
 }
-
-
-/* =========================================
-   INVITATION IMAGE
-========================================= */
 
 .invitation-image {
     display: block;
@@ -41,47 +27,31 @@
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* Mobile */
 
 @media screen and (max-width: 600px) {
-    .invitation-page {
-        width: 100%;
-        min-height: 100vh;
-    }
-    .invitation-container {
-        width: 100%;
-    }
     .invitation-image {
         width: 100%;
         max-width: none;
-        height: auto;
     }
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+/* Tablet */
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     .invitation-image {
         width: 100%;
         max-width: 1000px;
-        height: auto;
     }
 }
 
 
-/* =========================================
-   DESKTOP
-========================================= */
+/* Desktop */
 
 @media screen and (min-width: 1025px) {
     .invitation-image {
         width: 100%;
         max-width: 1200px;
-        height: auto;
     }
 }

@@ -1,7 +1,14 @@
+
 import IntroVideo from "./components/IntroVideo/IntroVideo";
 
 function App() {
-  return <IntroVideo />;
+  return (
+    <>
+      <IntroVideo />
+
+      
+    </>
+  );
 }
 
 export default App;
