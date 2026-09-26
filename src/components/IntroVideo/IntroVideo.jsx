@@ -1,54 +1,60 @@
-import introVideo from "../../assets/videos/intro.mp4";
+import { useState } from "react";
 import "./IntroVideo.css";
 
+import introVideo from "../../assets/videos/intro.mp4";
+import Invitation from "../Invitation/Invitation";
+
 function IntroVideo() {
-  const handleOpenInvitation = () => {
-    console.log("Open Invitation clicked");
-  };
+  const [showInvitation, setShowInvitation] = useState(false);
 
   return (
-    <main className="intro-page">
+    <div className="intro-page">
 
-      {/* Intro Video */}
-      <video
-        className="intro-video"
-        autoPlay
-        muted
-        playsInline
-      >
-        <source src={introVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {!showInvitation ? (
+        <section className="video-section">
 
-      {/* Dark Overlay */}
-      <div className="intro-overlay">
-
-        <div className="intro-content">
-
-          <p className="intro-small-text">
-            OUR ENGAGEMENT
-          </p>
-
-          <h1 className="intro-names">
-            Navodi <span>&</span> Viraj
-          </h1>
-
-          <p className="intro-subtitle">
-            Together with their families
-          </p>
-
-          <button
-            className="open-invitation-btn"
-            onClick={handleOpenInvitation}
+          <video
+            className="intro-video"
+            autoPlay
+            muted
+            playsInline
           >
-            Open Invitation
-          </button>
+            <source src={introVideo} type="video/mp4" />
+          </video>
 
-        </div>
+          <div className="intro-overlay">
 
-      </div>
+            <div className="intro-content">
 
-    </main>
+              <p className="intro-small-text">
+                OUR ENGAGEMENT
+              </p>
+
+              <h1 className="intro-names">
+                Navodi <span>&</span> Viraj
+              </h1>
+
+              <p className="intro-subtitle">
+                Together with their families
+              </p>
+
+              <button
+                className="open-invitation-btn"
+                onClick={() => setShowInvitation(true)}
+              >
+                Open Invitation
+              </button>
+
+            </div>
+
+          </div>
+
+        </section>
+      ) : (
+        <Invitation />
+      )}
+
+    </div>
   );
 }
 

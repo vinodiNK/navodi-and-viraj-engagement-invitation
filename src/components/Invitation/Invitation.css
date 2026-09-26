@@ -1,0 +1,26 @@
+.invitation-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #000;
+    overflow-y: auto;
+}
+
+.invitation-image {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .invitation-image {
+        width: 100%;
+        height: auto;
+    }
+}
