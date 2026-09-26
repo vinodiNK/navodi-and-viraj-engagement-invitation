@@ -1,26 +1,76 @@
+/* =========================================
+   INVITATION PAGE
+========================================= */
+
 .invitation-section {
     width: 100%;
     min-height: 100vh;
+    background: #000;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background: #000;
-    overflow-y: auto;
+    margin: 0;
+    padding: 0;
 }
+
+
+/* =========================================
+   INVITATION IMAGE
+========================================= */
 
 .invitation-image {
     display: block;
     width: 100%;
-    max-width: 1200px;
     height: auto;
+    max-width: 1200px;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
 }
 
 
-/* Mobile */
+/* =========================================
+   TABLET
+========================================= */
 
-@media (max-width: 600px) {
+@media (min-width: 601px) and (max-width: 1024px) {
     .invitation-image {
         width: 100%;
+        max-width: 900px;
+        height: auto;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .invitation-section {
+        width: 100%;
+        min-height: 100vh;
+        display: block;
+        background: #000;
+    }
+    .invitation-image {
+        display: block;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin: 0;
+    }
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1201px) {
+    .invitation-image {
+        width: 100%;
+        max-width: 1200px;
         height: auto;
     }
 }
