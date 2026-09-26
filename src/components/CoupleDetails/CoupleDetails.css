@@ -1,66 +1,208 @@
 .couple-details {
     width: 100%;
-    padding: 60px 20px 70px;
+    box-sizing: border-box;
+    padding: 90px 20px 100px;
     text-align: center;
     background: #ffffff;
 }
 
+
+/* =========================
+   INTRO TEXT
+========================= */
+
 .details-intro {
-    margin: 0 0 25px;
+    margin: 0 0 35px;
     font-family: "Poppins", sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    letter-spacing: 2px;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 3px;
     color: #555555;
     text-transform: uppercase;
 }
+
+
+/* =========================
+   BRIDE & GROOM NAMES
+========================= */
 
 .bride-name,
 .groom-name {
     margin: 0;
     font-family: "Playfair Display", serif;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 1.3;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.25;
     color: #800000;
 }
 
+
+/* =========================
+   PARENTS
+========================= */
+
 .parent-name {
-    margin: 8px 0 0;
+    margin: 12px 0 0;
     font-family: "Poppins", sans-serif;
-    font-size: 13px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
     color: #555555;
 }
 
+
+/* =========================
+   & SYMBOL
+========================= */
+
 .details-and {
-    margin: 25px 0;
+    margin: 35px 0;
     font-family: "Playfair Display", serif;
-    font-size: 28px;
+    font-size: 38px;
+    font-weight: 400;
     color: #800000;
 }
 
 
-/* Mobile */
+/* =========================
+   ENGAGEMENT DATE
+========================= */
+
+.engagement-date {
+    margin-top: 45px;
+    margin-bottom: 30px;
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    color: #800000;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.couple-details .countdown {
+    margin-top: 35px;
+    transform: scale(1.15);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 900px) {
+    .couple-details {
+        padding: 75px 20px 85px;
+    }
+    .details-intro {
+        font-size: 15px;
+        letter-spacing: 2.5px;
+    }
+    .bride-name,
+    .groom-name {
+        font-size: 42px;
+    }
+    .parent-name {
+        font-size: 15px;
+    }
+    .details-and {
+        margin: 30px 0;
+        font-size: 34px;
+    }
+    /* Date */
+    .engagement-date {
+        margin-top: 40px;
+        margin-bottom: 25px;
+        font-size: 36px;
+    }
+    /* Countdown */
+    .couple-details .countdown {
+        margin-top: 30px;
+        transform: scale(1.1);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media screen and (max-width: 600px) {
     .couple-details {
-        padding: 45px 15px 55px;
+        padding: 60px 18px 70px;
     }
     .details-intro {
+        margin-bottom: 28px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        line-height: 1.7;
+    }
+    .bride-name,
+    .groom-name {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+    .parent-name {
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    .details-and {
+        margin: 25px 0;
+        font-size: 30px;
+    }
+    /* Date */
+    .engagement-date {
+        margin-top: 35px;
         margin-bottom: 20px;
-        font-size: 10px;
+        font-size: 32px;
+        letter-spacing: 0.5px;
+        line-height: 1.3;
+    }
+    /* Countdown */
+    .couple-details .countdown {
+        margin-top: 25px;
+        transform: scale(1.05);
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media screen and (max-width: 380px) {
+    .couple-details {
+        padding: 50px 15px 60px;
+    }
+    .details-intro {
+        font-size: 11px;
         letter-spacing: 1.5px;
     }
     .bride-name,
     .groom-name {
-        font-size: 25px;
+        font-size: 28px;
     }
     .parent-name {
-        font-size: 10px;
+        font-size: 11px;
     }
     .details-and {
-        margin: 18px 0;
-        font-size: 23px;
+        font-size: 27px;
+        margin: 22px 0;
+    }
+    /* Date */
+    .engagement-date {
+        margin-top: 30px;
+        margin-bottom: 18px;
+        font-size: 27px;
+    }
+    /* Countdown */
+    .couple-details .countdown {
+        margin-top: 20px;
+        transform: scale(1);
     }
 }
