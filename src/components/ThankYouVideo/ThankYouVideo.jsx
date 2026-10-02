@@ -20,23 +20,12 @@ function ThankYouVideo() {
 
         <div className="thank-you-content">
 
-          <p className="thank-you-small">
-            THANK YOU
-          </p>
+          
 
-          <h2 className="thank-you-title">
-            Thank You
-          </h2>
+          
 
-          <p className="thank-you-message">
-            We look forward to celebrating
-            <br />
-            this special day with you.
-          </p>
+          
 
-          <p className="thank-you-names">
-            Navodi &amp; Viraj
-          </p>
 
         </div>
 
