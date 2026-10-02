@@ -1,18 +1,15 @@
-import "./CoupleGallery.css";
-
-
 import couple3 from "../../assets/images/couple/couple3.jpg";
 import couple4 from "../../assets/images/couple/couple4.jpg";
 import couple5 from "../../assets/images/couple/couple5.jpg";
+import "./CoupleGallery.css";
+
 import couple6 from "../../assets/images/couple/couple6.jpg";
 
 function CoupleGallery() {
-
     const images = [
-       
+        couple5,
         couple3,
         couple4,
-        couple5,
         couple6,
     ];
 
@@ -32,19 +29,15 @@ function CoupleGallery() {
             <div className="gallery-grid">
 
                 {images.map((image, index) => (
-
                     <div
                         className={`gallery-item gallery-item-${index + 1}`}
                         key={index}
                     >
-
                         <img
                             src={image}
                             alt={`Navodi and Viraj moment ${index + 1}`}
                         />
-
                     </div>
-
                 ))}
 
             </div>

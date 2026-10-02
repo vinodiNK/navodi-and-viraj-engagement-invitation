@@ -51,7 +51,7 @@
 
 
 /* =========================
-   ALL IMAGE BOXES
+   IMAGE BOX
 ========================= */
 
 .gallery-item {
@@ -65,35 +65,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: galleryFade 1s ease both;
+    /* Initial animation state */
+    opacity: 0;
+    transform: translateY(50px) scale(0.94);
+    animation: galleryReveal 1s ease forwards;
 }
 
 
 /* =========================
-   ALL IMAGES SAME SIZE
+   IMAGES
 ========================= */
 
 .gallery-item img {
     display: block;
     width: 100%;
     height: 100%;
+    /*
+       Keeps the complete image visible.
+       Faces will not be cropped.
+    */
     object-fit: contain;
+    transform: scale(1);
     transition: transform 0.8s ease, filter 0.8s ease;
 }
 
 
 /* =========================
-   HOVER
+   HOVER ANIMATION
 ========================= */
 
 .gallery-item:hover img {
-    transform: scale(1.04);
-    filter: brightness(0.97);
+    transform: scale(1.06);
+    filter: brightness(0.96);
 }
 
 
 /* =========================
-   ANIMATION
+   IMAGE REVEAL ANIMATION
+========================= */
+
+@keyframes galleryReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.94);
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   ANIMATION DELAYS
 ========================= */
 
 .gallery-item-1 {
@@ -101,34 +128,15 @@
 }
 
 .gallery-item-2 {
-    animation-delay: 0.2s;
-}
-
-.gallery-item-3 {
     animation-delay: 0.3s;
 }
 
-.gallery-item-4 {
-    animation-delay: 0.4s;
-}
-
-.gallery-item-5 {
+.gallery-item-3 {
     animation-delay: 0.5s;
 }
 
-.gallery-item-6 {
-    animation-delay: 0.6s;
-}
-
-@keyframes galleryFade {
-    from {
-        opacity: 0;
-        transform: translateY(40px) scale(0.97);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+.gallery-item-4 {
+    animation-delay: 0.7s;
 }
 
 
@@ -158,6 +166,9 @@
     .couple-gallery {
         padding: 50px 15px 70px;
     }
+    /* =========================
+       TITLE
+    ========================= */
     .gallery-subtitle {
         font-size: 9px;
         letter-spacing: 2px;
@@ -169,22 +180,46 @@
         margin-top: 15px;
         margin-bottom: 30px;
     }
-    /* One image per row */
+    /* =========================
+       ONE IMAGE PER ROW
+    ========================= */
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
-    /* All mobile images same size */
+    /* =========================
+       SAME IMAGE SIZE
+    ========================= */
     .gallery-item {
         width: 100%;
         aspect-ratio: 4 / 5;
+        border-radius: 12px;
     }
     .gallery-item img {
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
+    /* =========================
+       MOBILE HOVER
+    ========================= */
     .gallery-item:hover img {
-        transform: scale(1.02);
+        transform: scale(1.03);
+    }
+    /* =========================
+       MOBILE ANIMATION
+    ========================= */
+    @keyframes galleryReveal {
+        0% {
+            opacity: 0;
+            transform: translateY(35px) scale(0.96);
+        }
+        60% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
     }
 }
