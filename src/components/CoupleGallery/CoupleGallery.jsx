@@ -1,7 +1,6 @@
 import "./CoupleGallery.css";
 
-import couple1 from "../../assets/images/couple/couple1.jpg";
-import couple2 from "../../assets/images/couple/couple2.jpg";
+
 import couple3 from "../../assets/images/couple/couple3.jpg";
 import couple4 from "../../assets/images/couple/couple4.jpg";
 import couple5 from "../../assets/images/couple/couple5.jpg";
@@ -10,8 +9,7 @@ import couple6 from "../../assets/images/couple/couple6.jpg";
 function CoupleGallery() {
 
     const images = [
-        couple1,
-        couple2,
+       
         couple3,
         couple4,
         couple5,
