@@ -70,13 +70,47 @@
 
 .engagement-date {
     margin-top: 45px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     font-family: "Playfair Display", serif;
     font-size: 42px;
     font-weight: 500;
-    line-height: 1.3;
+    line-height: 1.1;
     letter-spacing: 1px;
     color: #800000;
+}
+
+
+/* =========================
+   ENGAGEMENT TIME
+========================= */
+
+.engagement-time {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    color: #800000;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+    .engagement-date {
+        margin-top: 25px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .engagement-time {
+        margin-top: 5px;
+        font-size: 11px;
+        letter-spacing: 0.8px;
+    }
 }
 
 
